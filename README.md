@@ -6,11 +6,8 @@ HOWTO
 1) Run a MetaD simulation using a low-level potential (U_LL), e.g. semiepirical or DFTB and reach convergence
  
    write out a colvar file with the following columns
-   ________________________________________
+
    Time       CV      metad.rbias      U_LL    
-   ...
-   ...
-   ________________________________________
    
    write out an xyz file containing the configurations used in the colvar file 
    
