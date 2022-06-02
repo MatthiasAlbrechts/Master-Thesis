@@ -9,7 +9,7 @@ HOWTO
 
    time | CV | metad.rbias | energy    
    
-   write out an xyz file containing the configurations used in the colvar file 
+   write out an xyz file containing the configurations used in the colvar file (no example present as the file is too big)
    
 2) Recalculate the energies of a subset of configurations at high-level potential by running the "high-level energies.py" script. The high-level energies are                automatically added to the colvar data of this subset under the name "FEP_dataX.txt", where X is the random seed used in the selection of the configurations.            By default, a subset of 500 configurations is calculated. Choose the number of subsets, depending on the size of the system and the desired precision.          
    Move the "FEP_dataX.txt" files to the "KDE" folder.
