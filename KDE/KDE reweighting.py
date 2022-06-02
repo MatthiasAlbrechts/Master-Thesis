@@ -44,11 +44,10 @@ for seed in range(n_subsets):
     # build high-level histogram by fitting Kernal Density model to the subset CV values using high-level weights
     kdehigh = KernelDensity(kernel='gaussian', bandwidth=0.05, leaf_size=1000).fit(cv.reshape(-1, 1),
                                                                        sample_weight=w_high)
-    # define grid
-    hist_PM6 = metaD_fes_CV
+ 
     # calculate FES from probability distribution of subset
-    subset_low_level_FES = - kdelow.score_samples(hist_PM6.reshape(-1, 1)) / beta
-    subset_high_level_FES = - kdehigh.score_samples(hist_PM6.reshape(-1, 1)) / beta
+    subset_low_level_FES = - kdelow.score_samples(metaD_fes_CV.reshape(-1, 1)) / beta
+    subset_high_level_FES = - kdehigh.score_samples(metaD_fes_CV.reshape(-1, 1)) / beta
     # calculate FEP term
     delta_FEP = subset_high_level_FES - subset_low_level_FES
     # calculate final high-level FES for respective subset
@@ -65,4 +64,4 @@ lower_boundary = mean_high_level_FES - tcrit * np.std(high_level_FESs, axis=0) /
 upper_boundary = mean_high_level_FES + tcrit * np.std(high_level_FESs, axis=0) / np.sqrt(n_subsets)
 
 filename = "high-level FES.txt"
-np.savetxt(filename, np.vstack((hist_PM6.T, mean_high_level_FES.T, lower_boundary.T,upper_boundary.T)).T, fmt='%12.3f %12.3f %12.3f %12.3f')
+np.savetxt(filename, np.vstack((metaD_fes_CV.T, mean_high_level_FES.T, lower_boundary.T,upper_boundary.T)).T, fmt='%12.3f %12.3f %12.3f %12.3f')
