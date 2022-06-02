@@ -1,5 +1,5 @@
 # Master-Thesis
-This repository contains the necessary scripts to calculate free energy perturbation (FEP) corrections to a free energy surface (FES) obtained from a Metadynamics simulation (MetaD) along a collective variable (CV). By means of kernel density estimation (KDE), a weighted histogram is constructed that accounts for the potential energy difference between two reference Hamiltonians, i.e., a low- and high-level potential. By recalculating different subsets of randomly sampled metaD configurations at high-level theory, different high-level FESs are obtained. The arithmetic mean of these FESs is chosen as the estimate of the true high-level FES. 
+This repository contains the necessary scripts to calculate free energy perturbation (FEP) corrections to a free energy surface (FES) obtained from a Metadynamics simulation (MetaD) along a collective variable (CV). By means of kernel density estimation (KDE), a weighted histogram is constructed that accounts for the potential energy difference between two reference Hamiltonians, i.e., a low- and high-level potential. By recalculating different subsets of randomly sampled metaD configurations at high-level theory, different high-level FESs are obtained. The arithmetic mean of these FESs is calculated as the estimate of the true high-level FES. 
 
 HOWTO
 
