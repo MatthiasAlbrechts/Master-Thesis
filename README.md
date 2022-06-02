@@ -7,7 +7,7 @@ HOWTO
  
    write out a colvar file with the following columns
 
-   Time       CV      metad.rbias      U_LL    
+   Time         CV        metad.rbias        U_LL    
    
    write out an xyz file containing the configurations used in the colvar file 
    
