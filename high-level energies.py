@@ -27,7 +27,7 @@ configs = []
 for i in range(size):
     plumed_subset[i, :] = plumed_all[indexes[i], :]
     # read coordinates of selected configs
-    config_subset = read("sn2-pos-1.xyz", index=indexes[i] + n_skip_config, format="xyz")
+    config_subset = read("pos.xyz", index=indexes[i] + n_skip_config, format="xyz")
     configs.append(config_subset)
 
 # set up PBE0/def2-SVP(P) calc with Gaussian
