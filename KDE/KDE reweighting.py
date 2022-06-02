@@ -10,7 +10,7 @@ beta = 1000 / (Na * kb * T)
 Ethermal = (Na * kb * T) / 1000
 
 # read metaD FES
-metaD_fes = np.loadtxt("fes", skiprows=6, usecols=(0, 1))
+metaD_fes = np.loadtxt("metaD_fes", skiprows=6, usecols=(0, 1))
 metaD_fes_CV = metaD_fes[:, 0]
 metaD_fes_E = metaD_fes[:, 1]
 
