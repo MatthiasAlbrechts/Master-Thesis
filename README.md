@@ -3,7 +3,7 @@ This repository contains the necessary scripts to calculate free energy perturba
 
 HOWTO
 
-1) Run a MetaD simulation using a low-level potential, e.g. semiepirical or DFTB and reach convergence.
+1) Run a MetaD simulation using a low-level potential, e.g. semiepirical or DFTB, and reach convergence.
  
    Write out a colvar file with the following columns:
 
